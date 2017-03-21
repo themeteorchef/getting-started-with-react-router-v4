@@ -1,10 +1,9 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { Nav, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Meteor } from 'meteor/meteor';
 
-const handleLogout = () => Meteor.logout(() => browserHistory.push('/login'));
+const handleLogout = () => Meteor.logout();
 
 const userName = () => {
   const user = Meteor.user();
@@ -15,9 +14,9 @@ const userName = () => {
 const AuthenticatedNavigation = () => (
   <div>
     <Nav>
-      <LinkContainer to="/documents">
-        <NavItem eventKey={ 2 } href="/documents">Documents</NavItem>
-      </LinkContainer>
+      <li>
+        <NavLink to="/documents">Documents</NavLink>
+      </li>
     </Nav>
     <Nav pullRight>
       <NavDropdown eventKey={ 3 } title={ userName() } id="basic-nav-dropdown">

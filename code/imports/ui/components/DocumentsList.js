@@ -1,15 +1,14 @@
-import React from 'react';
-import { browserHistory } from 'react-router';
+import React, { PropTypes } from 'react';
 import { ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
 
-const handleNav = (_id) => {
-  browserHistory.push(`/documents/${_id}`);
-}
+const handleNav = (history, _id) => {
+  history.push(`/documents/${_id}`);
+};
 
-const DocumentsList = ({ documents }) => (
+const DocumentsList = ({ history, documents }) => (
   documents.length > 0 ? <ListGroup className="DocumentsList">
     {documents.map(({ _id, title }) => (
-      <ListGroupItem key={ _id } onClick={ () => handleNav(_id) }>
+      <ListGroupItem key={ _id } onClick={ () => handleNav(history, _id) }>
         { title }
       </ListGroupItem>
     ))}
@@ -18,7 +17,8 @@ const DocumentsList = ({ documents }) => (
 );
 
 DocumentsList.propTypes = {
-  documents: React.PropTypes.array,
+  history: PropTypes.object,
+  documents: PropTypes.array,
 };
 
 export default DocumentsList;

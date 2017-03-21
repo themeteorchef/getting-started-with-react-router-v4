@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 
-import { browserHistory } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
 import './validation.js';
@@ -21,7 +20,7 @@ const login = () => {
       if (location.state && location.state.nextPathname) {
         browserHistory.push(location.state.nextPathname);
       } else {
-        browserHistory.push('/');
+        // browserHistory.push('/');
       }
     }
   });

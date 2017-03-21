@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 
-import { browserHistory } from 'react-router';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { upsertDocument } from '../api/documents/methods.js';
 import './validation.js';
@@ -23,7 +22,7 @@ const handleUpsert = () => {
     } else {
       component.documentEditorForm.reset();
       Bert.alert(confirmation, 'success');
-      browserHistory.push(`/documents/${response.insertedId || doc._id}`);
+      component.props.history.push(`/documents/${response.insertedId || doc._id}`);
     }
   });
 };

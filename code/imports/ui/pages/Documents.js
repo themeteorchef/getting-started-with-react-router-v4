@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col, Button } from 'react-bootstrap';
 import DocumentsList from '../containers/DocumentsList.js';
 
-const Documents = () => (
+const Documents = ({ history }) => (
   <div className="Documents">
     <Row>
       <Col xs={ 12 }>
@@ -16,10 +16,14 @@ const Documents = () => (
             >New Document</Button>
           </Link>
         </div>
-        <DocumentsList />
+        <DocumentsList history={history} />
       </Col>
     </Row>
   </div>
 );
+
+Documents.propTypes = {
+  history: PropTypes.object,
+};
 
 export default Documents;
