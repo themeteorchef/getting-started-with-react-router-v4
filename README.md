@@ -1,6 +1,6 @@
 #### Tutorial: Getting Started with React Router v4
 
-Description of this tutorial goes here. Used in your tutorial repo's README.md file.
+In this tutorial, we'll take a look at migrating from
 
 [Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/getting-started-with-react-router-v4)  
 
