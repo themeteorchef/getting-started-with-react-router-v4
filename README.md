@@ -1,6 +1,6 @@
 #### Tutorial: Getting Started with React Router v4
 
-In this tutorial, we'll take a look at migrating from React Router v3 to v4 inside of The Meteor Chef's Base boilerplate. We'll learn how to define routes, handle authentication, and look at how things like navigation state and
+In this tutorial, we'll take a look at migrating from React Router v3 to v4 inside of The Meteor Chef's Base boilerplate. We'll learn how to define routes, handle authentication, and look at how things like navigation state and calling
 
 [Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/getting-started-with-react-router-v4)  
 
