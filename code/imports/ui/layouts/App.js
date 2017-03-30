@@ -52,4 +52,4 @@ const composer = (props, onData) => {
   });
 };
 
-export default composeWithTracker(composer, {}, {}, { pure: false })(App);
+export default composeWithTracker(composer)(App);

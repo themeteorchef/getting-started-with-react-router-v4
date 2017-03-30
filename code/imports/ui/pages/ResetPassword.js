@@ -4,7 +4,7 @@ import handleResetPassword from '../../modules/reset-password';
 
 export default class ResetPassword extends React.Component {
   componentDidMount() {
-    handleResetPassword({ component: this, token: this.props.params.token });
+    handleResetPassword({ component: this, token: this.props.match.params.token });
   }
 
   handleSubmit(event) {
@@ -54,5 +54,5 @@ export default class ResetPassword extends React.Component {
 }
 
 ResetPassword.propTypes = {
-  params: React.PropTypes.object,
+  match: React.PropTypes.object,
 };

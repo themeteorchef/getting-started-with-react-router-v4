@@ -13,7 +13,7 @@ const handleReset = () => {
     if (error) {
       Bert.alert(error.reason, 'danger');
     } else {
-      // browserHistory.push('/');
+      component.props.history.push('/');
       Bert.alert('Password reset!', 'success');
     }
   });
